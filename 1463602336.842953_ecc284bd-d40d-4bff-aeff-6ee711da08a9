@@ -1,0 +1,9 @@
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+To: Recipient <to@bitnation.co>
+From: Author <from@bitnation.co>
+Subject: Simple test message
+X-Peer: 127.0.0.1
+
+Body of the message.
