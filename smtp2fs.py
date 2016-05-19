@@ -7,7 +7,7 @@ import asyncore
 
 class SMTP2FileServer(DebuggingServer):
 
-    path = '/Users/dfranca/workspace/bitnation/smtp2fs'
+    path = './'
 
     def _print_message_content(self, peer, data):
         inheaders = 1
@@ -28,9 +28,16 @@ class SMTP2FileServer(DebuggingServer):
             output.append(line)
 
         filename = str(time()) + '_' + str(uuid.uuid4())
+        print("Filename generated: {0}".format(filename))
+
         file_path = os.path.join(self.path, filename)
+
+        print("Filename with full path: {0}".format(file_path))
+
         f = open(file_path, 'w')
         f.write('\n'.join(output))
+        f.close()
+        print("File successful saved.")
 
 
 if __name__ == '__main__':
